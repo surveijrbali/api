@@ -1,0 +1,99 @@
+[debug] [2020-11-18T14:12:20.774Z] ----------------------------------------------------------------------
+[debug] [2020-11-18T14:12:20.776Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Arif Iskandar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2020-11-18T14:12:20.777Z] CLI Version:   8.16.2
+[debug] [2020-11-18T14:12:20.777Z] Platform:      win32
+[debug] [2020-11-18T14:12:20.777Z] Node Version:  v12.18.3
+[debug] [2020-11-18T14:12:20.778Z] Time:          Wed Nov 18 2020 21:12:20 GMT+0700 (Western Indonesia Time)
+[debug] [2020-11-18T14:12:20.778Z] ----------------------------------------------------------------------
+[debug] [2020-11-18T14:12:20.778Z] 
+[debug] [2020-11-18T14:12:20.784Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-18T14:12:20.785Z] > authorizing via signed-in user
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting"}}
+[debug] [2020-11-18T14:12:22.857Z] [hub] writing locator at C:\Users\ARIFIS~1\AppData\Local\Temp\hub-surveijrbalicom.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, pubsub\u001b[22m"}}
+[info] +  functions: Using node@12 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@12 from host."}}
+[debug] [2020-11-18T14:12:24.919Z] defaultcredentials: writing to file C:\Users\Arif Iskandar\AppData\Roaming\firebase\surveijrbali_gmail_com_application_default_credentials.json
+[debug] [2020-11-18T14:12:24.925Z] Setting GAC to C:\Users\Arif Iskandar\AppData\Roaming\firebase\surveijrbali_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\Arif Iskandar\\AppData\\Roaming\\firebase\\surveijrbali_gmail_com_application_default_credentials.json"}}
+[debug] [2020-11-18T14:12:26.954Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2020-11-18T14:12:26.955Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2020-11-18T14:12:26.955Z] Starting Firestore Emulator with command {"binary":"java","args":["-Duser.language=en","-jar","C:\\Users\\Arif Iskandar\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.11.9.jar","--host","localhost","--port",8090,"--rules","C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\firestore.rules","--functions_emulator","localhost:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\Arif Iskandar\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.11.9.jar\",\"--host\",\"localhost\",\"--port\",8090,\"--rules\",\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\firestore.rules\",\"--functions_emulator\",\"localhost:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2020-11-18T14:12:28.237Z] API endpoint: http://localhost {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://localhost"}}
+[debug] [2020-11-18T14:12:28.237Z] :8090
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=localhost:8090
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":":8090\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=localhost:8090\n\nDev App Server is now running.\n\r\n"}}
+[debug] [2020-11-18T14:12:34.641Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/surveijrbalicom/webApps/-/config  
+ 
+[debug] [2020-11-18T14:12:36.137Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 18 Nov 2020 14:12:35 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2020-11-18T14:12:40.207Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2020-11-18T14:12:40.208Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2020-11-18T14:12:40.208Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\Arif Iskandar\\.cache\\firebase\\emulators\\ui-v1.2.2\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\Arif Iskandar\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.2.2\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2020-11-18T14:12:40.349Z] Web / API server started at http://localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at http://localhost:4000\n"}}
+[info] i  functions: Watching "C:\Documents\WORK\Codign Studio\Survei JR Bali\API\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\" for Cloud Functions..."}}
+[debug] [2020-11-18T14:12:40.753Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2020-11-18T14:12:40.754Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2020-11-18T14:12:40.755Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2020-11-18T14:12:40.756Z] [worker-~diagnostic~-a6b3555a-cb14-4c3b-b6da-3095fd02f09b]: Assigning socketPath: \\?\pipe\C:\Documents\WORK\Codign Studio\Survei JR Bali\API\functions\10216 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-a6b3555a-cb14-4c3b-b6da-3095fd02f09b]: Assigning socketPath: \\\\?\\pipe\\C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\10216"}}
+[debug] [2020-11-18T14:12:40.757Z] [worker-~diagnostic~-a6b3555a-cb14-4c3b-b6da-3095fd02f09b]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-a6b3555a-cb14-4c3b-b6da-3095fd02f09b]: BUSY"}}
+[debug] [2020-11-18T14:12:41.150Z] [runtime-status] [10216] Functions runtime initialized. {"cwd":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions","node_version":"12.18.3"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Functions runtime initialized. {\"cwd\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\",\"node_version\":\"12.18.3\"}"}}
+[debug] [2020-11-18T14:12:41.154Z] [runtime-status] [10216] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Disabled runtime features: undefined"}}
+[debug] [2020-11-18T14:12:41.157Z] [runtime-status] [10216] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.4.1","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.4.1\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.161Z] [runtime-status] [10216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.11.0\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.162Z] [runtime-status] [10216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.11.0\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.164Z] [runtime-status] [10216] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2020-11-18T14:12:41.165Z] [runtime-status] [10216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.11.0\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.203Z] [runtime-status] [10216] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Checked functions.config() {\"config\":{}}"}}
+[debug] [2020-11-18T14:12:41.203Z] [runtime-status] [10216] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.11.0\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2020-11-18T14:12:41.204Z] [runtime-status] [10216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.11.0\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.205Z] [runtime-status] [10216] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.4.1","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.4.1\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.206Z] [runtime-status] [10216] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.11.0","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.11.0\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2020-11-18T14:12:41.206Z] [runtime-status] [10216] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.4.1","resolution":"C:\\Documents\\WORK\\Codign Studio\\Survei JR Bali\\API\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"9.4.1\",\"resolution\":\"C:\\\\Documents\\\\WORK\\\\Codign Studio\\\\Survei JR Bali\\\\API\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2020-11-18T14:12:41.440Z] [runtime-status] [10216] initializeApp(DEFAULT) {"databaseURL":"https://surveijrbalicom.firebaseio.com","storageBucket":"surveijrbalicom.appspot.com","projectId":"surveijrbalicom"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] initializeApp(DEFAULT) {\"databaseURL\":\"https://surveijrbalicom.firebaseio.com\",\"storageBucket\":\"surveijrbalicom.appspot.com\",\"projectId\":\"surveijrbalicom\"}"}}
+[debug] [2020-11-18T14:12:41.452Z] [runtime-status] [10216] auth.setJwtVerificationEnabled(false) {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [10216] auth.setJwtVerificationEnabled(false)"}}
+[info] +  functions[admin]: http function initialized (http://localhost:5001/surveijrbalicom/us-central1/admin). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/surveijrbalicom/us-central1/admin)."}}
+[info] +  functions[auth]: http function initialized (http://localhost:5001/surveijrbalicom/us-central1/auth). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/surveijrbalicom/us-central1/auth)."}}
+[info] +  functions[user]: http function initialized (http://localhost:5001/surveijrbalicom/us-central1/user). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/surveijrbalicom/us-central1/user)."}}
+[info] 
+┌────────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! View status and logs at localhost:4000 │
+└────────────────────────────────────────────────────────────────┘
+
+┌────────────────┬────────────────┬──────────────────────────┐
+│ Emulator       │ Host:Port      │ View in Emulator UI      │
+├────────────────┼────────────────┼──────────────────────────┤
+│ Authentication │ localhost:9099 │ localhost:4000/auth      │
+├────────────────┼────────────────┼──────────────────────────┤
+│ Functions      │ localhost:5001 │ localhost:4000/functions │
+├────────────────┼────────────────┼──────────────────────────┤
+│ Firestore      │ localhost:8090 │ localhost:4000/firestore │
+├────────────────┼────────────────┼──────────────────────────┤
+│ Hosting        │ localhost:5000 │ n/a                      │
+└────────────────┴────────────────┴──────────────────────────┘
+  Other reserved ports: 4400, 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2020-11-18T14:12:42.026Z] [worker-~diagnostic~-a6b3555a-cb14-4c3b-b6da-3095fd02f09b]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-a6b3555a-cb14-4c3b-b6da-3095fd02f09b]: IDLE"}}
+[debug] [2020-11-18T14:12:43.894Z] Nov 18, 2020 9:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 18, 2020 9:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2020-11-18T14:12:43.895Z] Nov 18, 2020 9:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+Nov 18, 2020 9:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 18, 2020 9:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\nNov 18, 2020 9:12:43 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2020-11-18T14:12:44.137Z] Nov 18, 2020 9:12:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 18, 2020 9:12:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2020-11-18T14:12:44.949Z] Nov 18, 2020 9:12:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Nov 18, 2020 9:12:44 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}

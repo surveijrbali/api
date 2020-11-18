@@ -6,5 +6,5 @@ JR.joi.object({
     name: JR.joi.string().min(4).required(),
     address: location,
     accidentDate: JR.joi.date().default(Date.now()),
-    accidentDate: location
+    accidentLocation: location
 })

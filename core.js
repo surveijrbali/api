@@ -38,10 +38,11 @@ module.exports ={
 	jwt: jwt,
 	constant: constant,
 	authMiddleware: authMiddleware,
-	initialize: function () {
+	initialize: function (middleware = false) {
 		const tmp = express();
 		tmp.use(express.json())
 		tmp.use(cors({origin: true}))
+		if(middleware) tmp.use(authMiddleware)
 		return tmp
 	},
 	send: function (name) {

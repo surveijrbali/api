@@ -37,8 +37,7 @@ module.exports = validateFirebaseIdToken = async (req, res, next) => {
         } else {
             console.log('ID Token correctly decoded', user.id);
             req.user = user;
-            next();
-            return;
+            return next();
         }
     })
 };

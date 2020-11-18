@@ -1,49 +1,69 @@
-const JR = require('../core')
-const express   = require('express');
-const cors      = require('cors');
-const jwt       = require('jsonwebtoken')
-
-// const UserModel      = require('../models/user')
-
-const user = express();
-user.use(express.json())
-user.use(cors({origin: true}))
+const BASE = require('../core')
+const User = require('../models/user')
+const Petugas = require('../models/petugas')
+const Otorisator = require('../models/otorisator')
+const user = BASE.initialize(true)
 
 
+// Get User List
 user.get('/', async (req, res) => {
-    const snapshot = await JR.db.collection("Users").get()
+    const data = await(await User.db().get()).docs
+    let ret = []
 
-    let users = []
+    data.forEach(doc => {
+        ret.push({key : doc.id, data: doc.data()})
+    });
+
+    res.status(200).send({status: true, data : ret})
+})
+
+// Get User Document by id
+user.get('/:id', async (req, res) => {
+
+    const id = req.params.id
+
+    const user = await(await User.db(id).get()).data()
     
-    snapshot.forEach(doc => {
-        let id= doc.id
-        let data = doc.data()
+    if(user){
+        res.status(200).send({status: true, data : user})
+        return
+    }
 
-        users.push({id, ...data})
-    })
-
-    res.status(200).send(JSON.stringify(users))
+    res.status(400).send({status : false, error: "user with id " + id + " not found"})
 })
 
-user.get("/:id", async(req, res) => {
-    const snapshot = await JR.db.collection("Users").doc(req.params.id).get()
+// Insert new user document
+user.post('/', async (req, res)=> {
+    const input = req.body
 
-    const userId = req.params.id
-    const userData = snapshot.data()
+    const cek = User.model.validate(input)
 
-    res.status(200).send(JSON.stringify({id: userId, ...userData}))
+    if(!cek.error){
+        BASE.admin.auth().createUser({
+            email: input.email,
+            password: input.password
+        }).then(async data=>{
+            input.id = data.uid
+            input.createdAt = cek.value.createdAt    
+            const save = await User.db(input.id).set(input)
+            return res.status(201).send({status: true, data: input})
+        }).catch(err=>{
+            res.status(400).send({status : false, error: err.message})
+        })
+
+        return
+    }
+
+    res.status(400).send({status : false, error: cek.error.message})
 })
 
-user.post('/', async (req,res) => {
-    const user = req.body;
 
-    // const {error} = JR.joi.validate(user, schema)
+// Update document by id
+user.put('/:id', async (req, res)=>{
+    const input = req.body
 
-    // await JR.db.collection("Users").add(user);
-    
-    // console.log(UserModel.validate)
-
-    res.status(200).send({})
+    await User.db(req.params.id).update(input)
+    res.status(200).send({status: true})
 })
 
-exports.user = JR.functions.https.onRequest(user);
+exports.user = BASE.send(user);

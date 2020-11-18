@@ -8,5 +8,8 @@ module.exports = {
         type: JR.joi.string().valid('Petugas', 'Otorisator', 'Undefined').required(),
         createdAt: JR.joi.date().default(Date.now())
     }),
-    db : JR.admin.firestore().collection("Users")
+    db : function (idUser = null) {
+        if(idUser) return this.db().doc(idUser)
+        return JR.admin.firestore().collection("Users")
+    }
 }
