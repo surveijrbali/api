@@ -1,5 +1,12 @@
 const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+const admin 	= require('firebase-admin');
+const joi 		= require('joi')
+const constant 	= require('./constant')
+const cors      = require('cors');
+const jwt       = require('jsonwebtoken')
+const express   = require('express');
+const axios 	= require('axios')
+const authMiddleware = require('./authMiddleware')
 admin.initializeApp()
 
 
@@ -23,7 +30,23 @@ var addToObject = function (obj, key, value, index) {
 
 module.exports ={
     functions : functions,
-    admin : admin,
+	admin : admin,
+	joi: joi,
+	express: express,
+	cors: cors,
+	axios: axios,
+	jwt: jwt,
+	constant: constant,
+	authMiddleware: authMiddleware,
+	initialize: function () {
+		const tmp = express();
+		tmp.use(express.json())
+		tmp.use(cors({origin: true}))
+		return tmp
+	},
+	send: function (name) {
+		return functions.https.onRequest(name)
+	},
     db: admin.firestore(),
     addToObject: addToObject
 }

@@ -1,9 +1,13 @@
 const JR = require('../core')
 const express   = require('express');
 const cors      = require('cors');
-const user = express();
-user.use(cors({origin: true}))
+const jwt       = require('jsonwebtoken')
 
+// const UserModel      = require('../models/user')
+
+const user = express();
+user.use(express.json())
+user.use(cors({origin: true}))
 
 
 user.get('/', async (req, res) => {
@@ -33,9 +37,13 @@ user.get("/:id", async(req, res) => {
 user.post('/', async (req,res) => {
     const user = req.body;
 
-    await JR.db.collection("Users").add(user);
+    // const {error} = JR.joi.validate(user, schema)
 
-    res.status(201).send()
+    // await JR.db.collection("Users").add(user);
+    
+    // console.log(UserModel.validate)
+
+    res.status(200).send({})
 })
 
 exports.user = JR.functions.https.onRequest(user);
